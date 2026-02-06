@@ -2,7 +2,7 @@
 
 Native macOS menu bar app (SwiftUI) for controlling `redshift` from the top bar.
 
-![RedshiftMenuBar Screenshot](Screenshots/Screenshot.png)
+![RedshiftMenuBar Screenshot](imgs/Screenshot.png)
 
 ## Features
 - Enable/disable `redshift` directly from the menu bar.
@@ -24,6 +24,20 @@ Native macOS menu bar app (SwiftUI) for controlling `redshift` from the top bar.
 - `redshift` installed (default path: `/opt/homebrew/bin/redshift`)
 - Xcode 15+ (recommended)
 - `xcodegen` if regenerating the Xcode project (`brew install xcodegen`)
+
+## Install
+### Option A: Install from release zip
+1. Download `RedshiftMenuBar-macOS-Release.zip` from Releases.
+2. Unzip and move `RedshiftMenuBar.app` to `/Applications`.
+3. Launch once (right-click -> Open if Gatekeeper prompts).
+4. The app runs from the menu bar (no Dock icon by design).
+
+### Option B: Build and install from source
+1. Generate project: `xcodegen generate`
+2. Build: `xcodebuild -project RedshiftMenuBar.xcodeproj -scheme RedshiftMenuBar -configuration Release build`
+3. Copy app to Applications:
+   - `cp -R .xcodebuild/Build/Products/Release/RedshiftMenuBar.app /Applications/`
+4. Launch from `/Applications/RedshiftMenuBar.app`.
 
 ## Quick Start
 1. Build with SwiftPM:

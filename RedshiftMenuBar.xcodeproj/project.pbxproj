@@ -3,18 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0E54AE368DC66678A0E3C748 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DF21B322AF7541E5BA927 /* LocationService.swift */; };
 		389C577172CD350B5623C2E6 /* RedshiftMenuBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B75A31C334FBDCF3DA733 /* RedshiftMenuBarApp.swift */; };
 		4F39E6B16FFEA541EECA3465 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C32D48274B606AB6A575C4 /* SettingsView.swift */; };
+		9EFE28A36CAD00866E8D4033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F1E16C8F0FF6FDF5C40C4F /* Assets.xcassets */; };
 		C23550D8D7827AD0A68D1A18 /* RedshiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B67A18AEBD8C81C5EB16AC /* RedshiftController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03B67A18AEBD8C81C5EB16AC /* RedshiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedshiftController.swift; sourceTree = "<group>"; };
+		88F1E16C8F0FF6FDF5C40C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D68F35AA5C434114BC3194F /* RedshiftMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedshiftMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37DF21B322AF7541E5BA927 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B57B75A31C334FBDCF3DA733 /* RedshiftMenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedshiftMenuBarApp.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		6E60717F9E8F721886704331 /* RedshiftMenuBar */ = {
 			isa = PBXGroup;
 			children = (
+				88F1E16C8F0FF6FDF5C40C4F /* Assets.xcassets */,
 				A37DF21B322AF7541E5BA927 /* LocationService.swift */,
 				03B67A18AEBD8C81C5EB16AC /* RedshiftController.swift */,
 				B57B75A31C334FBDCF3DA733 /* RedshiftMenuBarApp.swift */,
@@ -58,6 +61,7 @@
 			buildConfigurationList = 10AB41B123A5544CC020570B /* Build configuration list for PBXNativeTarget "RedshiftMenuBar" */;
 			buildPhases = (
 				DE8085CD8D3027A35A6F2D27 /* Sources */,
+				05348D813B9E21ED06716275 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -89,6 +93,7 @@
 			);
 			mainGroup = 21CB55858581C30295C1D98A;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -96,6 +101,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05348D813B9E21ED06716275 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFE28A36CAD00866E8D4033 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE8085CD8D3027A35A6F2D27 /* Sources */ = {
@@ -116,8 +132,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -129,7 +143,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bowlerr.RedshiftMenuBar;
 				PRODUCT_NAME = RedshiftMenuBar;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -138,8 +151,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -151,7 +162,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bowlerr.RedshiftMenuBar;
 				PRODUCT_NAME = RedshiftMenuBar;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Release;

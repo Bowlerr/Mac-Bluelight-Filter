@@ -7,9 +7,15 @@ Packages/
 
 # Xcode
 DerivedData/
+.xcodebuild/
 *.xcworkspace/xcuserdata/
 *.xcuserdatad/
 *.xcuserstate
+*.xcarchive
+*.dSYM
+
+# Local build outputs
+dist/
 
 # Editor/temp
 *.swp
