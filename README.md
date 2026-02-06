@@ -2,6 +2,8 @@
 
 Native macOS menu bar app (SwiftUI) for controlling `redshift` from the top bar.
 
+![RedshiftMenuBar Screenshot](Screenshots/Screenshot.png)
+
 ## Features
 - Enable/disable `redshift` directly from the menu bar.
 - Timing modes:
