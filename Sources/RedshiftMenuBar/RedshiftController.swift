@@ -46,9 +46,12 @@ final class RedshiftController: ObservableObject {
     private var scheduleTimer: Timer?
     private var locationService: LocationService?
     private let workerQueue = DispatchQueue(label: "RedshiftController.worker", qos: .userInitiated)
+    private var previouslyAppliedStartAtLogin: Bool
 
     init() {
-        self.settings = SettingsStore.load()
+        let loadedSettings = SettingsStore.load()
+        self.settings = loadedSettings
+        self.previouslyAppliedStartAtLogin = loadedSettings.startAtLogin
         refreshRunningState()
         setupScheduleTimer()
     }
@@ -63,7 +66,19 @@ final class RedshiftController: ObservableObject {
 
     func applySettings() {
         SettingsStore.save(settings)
+        let shouldRestartUnderLaunchAgent = settings.startAtLogin && !previouslyAppliedStartAtLogin
         updateLaunchAgent()
+        previouslyAppliedStartAtLogin = settings.startAtLogin
+
+        if shouldRestartUnderLaunchAgent {
+            // Enabling start-at-login loads the LaunchAgent immediately, which starts
+            // another app instance. Exit this one so the launchd-managed instance remains.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                NSApp.terminate(nil)
+            }
+            return
+        }
+
         let settingsSnapshot = settings
         let enabledSnapshot = isEnabled
         workerQueue.async { [weak self] in
